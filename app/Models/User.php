@@ -45,4 +45,11 @@ class User extends Authenticatable
     {
         return $this->hasMany(Message::class);
     }
+    protected static function booted()
+    {
+        static::creating(function ($user) {
+            $user->password = Hash::make($user->password);
+        }
+        );
+    }
 }
