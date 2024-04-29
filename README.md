@@ -79,7 +79,16 @@ This Laravel API provides a simple chat functionality using Pusher services. It 
   
     ```json
     {
-        "message": "User registered successfully"
+        "user": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "updated_at": "2024-04-29T23:21:42.000000Z",
+        "created_at": "2024-04-29T23:21:42.000000Z",
+        "id": 1
+    },
+    "access_token": "1|J7mjoHSlKyHxrgk1M1ydHbawa9slVVucC7xupkqL78d6eed7",
+    "token_type": "Bearer",
+    "status": 200
     }
     ```
 
@@ -99,8 +108,17 @@ This Laravel API provides a simple chat functionality using Pusher services. It 
   
     ```json
     {
-        "access_token": "your_access_token",
-        "token_type": "Bearer"
+        "user": {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john@example.com",
+        "email_verified_at": null,
+        "created_at": "2024-04-29T23:23:59.000000Z",
+        "updated_at": "2024-04-29T23:23:59.000000Z"
+    },
+    "access_token": "2|gnesJWDIMWeJvqWzxtkln007ht3Ov6a8orSuMPJF566c7e4f",
+    "token_type": "Bearer",
+    "status": 201
     }
     ```
 
@@ -130,16 +148,16 @@ This Laravel API provides a simple chat functionality using Pusher services. It 
     [
         {
             "id": 1,
-            "sender_id": 1,
-            "recipient_id": 2,
+            "sender": 1,
+            "receiver": 2,
             "message": "Hello",
             "created_at": "2024-04-30 12:00:00",
             "updated_at": "2024-04-30 12:00:00"
         },
         {
             "id": 2,
-            "sender_id": 1,
-            "recipient_id": 3,
+            "sender": 1,
+            "receiver": 3,
             "message": "Hi there",
             "created_at": "2024-04-30 12:01:00",
             "updated_at": "2024-04-30 12:01:00"
@@ -159,7 +177,7 @@ This Laravel API provides a simple chat functionality using Pusher services. It 
         {
             "id": 3,
             "sender_id": 2,
-            "recipient_id": 1,
+            "receiver": 1,
             "message": "Hey",
             "created_at": "2024-04-30 12:02:00",
             "updated_at": "2024-04-30 12:02:00"
@@ -176,7 +194,7 @@ This Laravel API provides a simple chat functionality using Pusher services. It 
   
     ```json
     {
-        "recipient_id": 2,
+        "receiver": 2,
         "message": "Hello"
     }
     ```
