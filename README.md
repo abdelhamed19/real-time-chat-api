@@ -72,6 +72,7 @@ This Laravel API provides a simple chat functionality using Pusher services. It 
         "name": "John Doe",
         "email": "john@example.com",
         "password": "password"
+        "password_confirmation": "password"
     }
     ```
 - **Response:**
